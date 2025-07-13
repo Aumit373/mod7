@@ -20,7 +20,7 @@ const App = () => {
   // Fetch registered students
   const fetchStudents = async () => {
     try {
-      const response = await fetch("http://13.50.105.127:5050/getStudents");
+      const response = await fetch("http://16.16.127.96:5050/getStudents");
       const data = await response.json();
       setStudents(data);
     } catch (error) {
@@ -45,7 +45,7 @@ const handleSubmit = async (e) => {
 
   // Use toast.promise
   toast.promise(
-    fetch("http://13.50.105.127:5050/addStudent", {
+    fetch("http://16.16.127.96:5050/addStudent", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
